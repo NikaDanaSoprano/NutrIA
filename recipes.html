@@ -8,63 +8,78 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 	<title>Bienvenido</title>
 </head>
-<body class="page-white">
+<body class="page-white profile-header">
 	<header>
-		<div class="btn_session">
-            <a href="">Inicio</a>
-            <a href="">Recetas</a>
-            <a href="">Estadísticas</a>
-            <a href="">Nutria Bot</a>
-            <a href="">Configuración</a>
-			<a class="profile" href="">boton perfil</a>
-			<a class="logout" href="">boton logout</a>           
-		</div>
+		<div class="menu">
+            <ul>
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Recetas</a></li>
+                <li><a href="">Estadísticas</a></li>
+                <li><a href="">Nutria Bot</a></li>
+                <li><a href="">Configuración</a></li>
+                <li><a class="logout" href="">Salir</a></li>
+            </ul>      
+        </div>  
 	</header>
 	<main>
 		<div class="content">
-			<div class="">
-				<div class="">
-					<div class="">
-                        <p>Bienvenida</p>
-			        </div>					
-					<div class="">
-                        <form action="" method="">
-                            <label>
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                                <input type="search" name="q" placeholder="Buscar">
-                            </label>
-                            <button type="submit">Buscar</button>
-                        </form>
-                    </div>
+            <div class="header-recipes">
+                <div>
+                    <p>Hola, usuario</p>
+                    <p>¡Bienvenio a NutrIA!</p>
+                </div>					
+				<div class="search">
+                    <form action="" method="">
+                        <div>
+							<i class="fa-solid fa-magnifying-glass"></i>
+							<input type="search" name="q" placeholder="Buscar">
+						</div>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <h2>Recetas de NutrIA</h2>
+            </div>
+            <section class="feed">
+                <div>
+                    <article class="recipe">
+                        <div class="img-box">
+                            <img src="./img/r_1.webp" alt="">
+                        </div>
+                        <div class="card-info">
+                            <h5>Titulo receta</h5>
+                        </div>
+                    </article>
+                    <article class="recipe">
+                        <div class="img-box">
+                            <img src="./img/r_2.webp" alt="">
+                        </div>
+                        <div class="card-info">
+                            <h5>Titulo receta</h5>
+                        </div>
+                    </article>
                 </div>
                 <div>
-                    <p>Recetas de NutrIA</p>
-                </div>
-                <div>
-                    <div>
-                        <p>Titulo receta</p>
-                        <div><span></span><span></span></div>
-                        <div><span></span><span></span></div>
-                    </div>
-                    <div>
-                        <p>Titulo receta</p>
-                        <div><span></span><span></span></div>
-                        <div><span></span><span></span></div>
-                    </div>
-                    <div>
-                        <p>Titulo receta</p>
-                        <div><span></span><span></span></div>
-                        <div><span></span><span></span></div>
-                    </div>
-                    <div>
-                        <p>Titulo receta</p>
-                        <div><span></span><span></span></div>
-                        <div><span></span><span></span></div>
-                    </div>                    
-                </div>
-				</div>
-			</div>
+                    <article class="recipe">
+                        <div class="img-box">
+                            <img src="./img/r_3.webp" alt="">
+                        </div>
+                        <div class="card-info">
+                            <h5>Titulo receta</h5>
+                        </div>
+                    </article>
+                    <article class="recipe">
+                        <div class="img-box">
+                            <img src="./img/r_4.webp" alt="">
+                        </div>
+                        <div class="card-info">
+                            <h5>Titulo receta</h5>
+                        </div>
+                    </article>
+                </div>                  
+            </section>
 		</div>
+        <div class="nutria-bot"></div>
 	</main>
 	<footer></footer>
 </body>
