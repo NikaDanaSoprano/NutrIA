@@ -12,7 +12,7 @@ a {
 body {
 	font-family: 'Poppins', sans-serif;
 }
-body.page-home {
+body.page-gradient {
 	background: linear-gradient(
 	120deg,
 	#ff3b5c 0%,
@@ -25,7 +25,7 @@ body.page-home {
 	#ff9a3a 100%
 	);
 }
-body.page-login {
+body.page-white {
 	background-color: #fff;
 }
 header {
@@ -37,7 +37,7 @@ main{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 85vh;
+	min-height: 90vh;
 }
 .btn_session {
 	display: flex;
@@ -107,9 +107,8 @@ main{
 	#ff9a3a 85%,
 	#ffe34d 100%
 	);
-
 }
-.form_login {
+.panel {
 	display: flex;
 	justify-content: center;
 	width: 900px;
@@ -133,7 +132,7 @@ main{
 		#ff9a3a 100%
 	);
 }
-.login_header, .login_footer {
+.login_header, .login_footer, .setup_footer {
 	padding: 10px 0px 30px 0px;
 	text-align: center;
 }
@@ -145,12 +144,12 @@ main{
 	font-size: 30px;
 	margin: 20px;
 }
-.form_login form {
+.panel form {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
-.form_login form div {
+.panel form div {
 	display: flex;
 	align-items: center;
 	gap: 10px;
@@ -160,10 +159,10 @@ main{
 	background: rgba(255,255,255,0.9);
 	margin: 10px;
 }
-.form_login form div i {
+.panel form div i {
 	color: rgba(0,0,0,0.4);
 }
-.form_login form input {
+.panel form input {
 	border: none;
 	background: transparent;
 	outline: none;
@@ -171,10 +170,10 @@ main{
 	width: 400px;
 	font-family: inherit;
 }
-.form_login form input::placeholder{
+.panel form input::placeholder{
 	color: rgba(0,0,0,0.4);
 }
-.form_login button {
+.panel button, .setup button {
 	background-color: #8b0f3f;
 	width: 250px;
 	color: #fff;
@@ -184,4 +183,110 @@ main{
 	cursor: pointer;
 	margin: 20px 0px 0px 10px;
 }
-
+/*Setup*/
+.setup {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	height: 650px;
+	text-align: center;
+}
+.setup_header {
+	text-align: center;
+	color: rgba(0, 0, 0, 0.7);
+	font-size: 22px;
+	font-weight: 600;
+	margin: 40px;
+}
+.setup_header span {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 100px;
+	height: 100px;
+    background: linear-gradient(
+	135deg,
+	#ff7a2f,
+	#ffc14d
+	);
+	box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+	border-radius: 100%;
+	font-size: 60px;
+}
+.setup_header p {
+	margin: 40px;
+}
+.goal {
+	display: flex;
+	text-align: left;
+	gap: 50px;
+}
+.goal_card {
+	display: flex;
+	align-items: center;
+	width: 300px;
+	gap: 30px;
+	background: linear-gradient(to right, #f2b48c, #e59aa6, #d9878f);	border-radius:20px;
+	padding:30px;
+	border:3px solid rgba(255,255,255,0.8);
+	box-shadow: 0px 6px 15px rgba(0, 0, 0,  0.4);
+	cursor: pointer;
+}
+.goal_card div {
+	min-height: 100px;
+	padding: 10px;
+}
+.goal_card i {
+	font-size: 40px;
+}
+.goal_card input {
+	display: none;
+}
+.goal_card span {
+	font-weight: bold;
+}
+.setup button {
+	margin: 60px;
+}
+.profile_setup .panel form div {
+	background: linear-gradient(to right, #f2b48c, #e59aa6, #d9878f);
+	border:3px solid rgba(255,255,255,0.9);
+	box-shadow: 0px 6px 15px rgba(0, 0, 0,  0.4);
+}
+.profile_setup input {
+	cursor: pointer;
+}
+.profile_setup input::placeholder {
+	color: rgba(0, 0, 0, 0.9)!important;
+	font-weight: bold;
+	font-size: 15px;
+}
+.profile_setup form i {
+	color: rgba(0, 0, 0, 0.9)!important;
+	font-weight: bold;
+	font-size: 20px;
+}
+.profile_setup .card, .profile_setup .panel {
+	background: transparent;
+	box-shadow: none;
+}
+.profile_setup button {
+	background: linear-gradient(180deg, #494747, #292323);
+}
+/*Modal*/
+.modal {
+	background: linear-gradient(
+	180deg,
+	#ffa63d 0%,
+	#ff6a4a 40%,
+	#ff2d55 100%
+	);
+	height: 300px;
+	border-radius: 30px;
+	height:100vh;
+	display:flex;
+	flex-direction:column;
+	justify-content:start;
+	align-items:center;
+}

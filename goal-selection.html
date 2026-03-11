@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<title>¿Cuál es tu objetivo?</title>
+</head>
+<body class="page-gradient">
+	<header>
+		<div class="btn_session">
+			<a class="profile" href="">boton perfil</a>
+			<a class="logout" href="">boton logout</a>
+		</div>
+	</header>
+	<main>
+		<div class="content setup">
+			<div class="setup_header">
+				<span><i class="fa-solid fa-award"></i></span>
+				<p>¿Cuál es tu objetivo?</p>
+			</div>
+			<form action="/guardar-objetivo" method="POST">
+				<div class="goal">
+					<label class="goal_card">
+						<input type="radio" name="objetivo" value="perder_grasa">
+						<span><i class="fa-solid fa-arrow-trend-up"></i></span>
+						<div>
+							<span>Perder grasa</span>
+							<p>Optimiza la perdida de peso y conserva masa muscular.</p> 
+						</div>
+					</label>
+
+					<label class="goal_card">
+						<input type="radio" name="objetivo" value="ganar_musculo">
+						<span><i class="fa-solid fa-arrow-trend-down"></i></span>
+						<div>
+							<span>Ganar músculo</span>
+							<p>Incrementa tu peso y hazte más fuerte.</p> 
+						</div>
+					</label>
+
+					<label class="goal_card">
+						<input type="radio" name="objetivo" value="mantener_peso">
+						<span><i class="fa-solid fa-equals"></i></span>
+						<div>
+							<span>Mantener peso</span>
+							<p>Manténtu peso estable y busca la recomposición corporal.</p> 
+						</div>
+					</label>
+				</div>
+				<button type="submit">Siguiente</button>
+			</form>
+		</div>
+	</main>
+	<footer></footer>
+</body>
+</html>
