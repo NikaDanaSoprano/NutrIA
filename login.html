@@ -3,51 +3,96 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+	<script src="https://cdn.tailwindcss.com"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 	<title>Login</title>
 </head>
-<body class="page-white">
-	<header>
-		<div class="menu">
-            <ul>
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Recetas</a></li>
-                <li><a href="">Estadísticas</a></li>
-                <li><a href="">Nutria Bot</a></li>
-                <li><a href="">Configuración</a></li>
-                <li><a class="logout" href="">Salir</a>   </li>
-            </ul>      
-        </div>  
+<body class="bg-white" ºstyle="font-family: 'Poppins', sans-serif;">
+	<header class="bg-gradient-to-r from-[#f2b48c] via-[#e59aa6] to-[#d9878f] px-3 py-[5px] shadow-[0_4px_6px_rgba(0,0,0,0.4)]">
+		<div class="flex items-center justify-end">
+
+			<details class="md:hidden relative">
+				<summary class="list-none cursor-pointer text-white text-2xl">
+					<i class="fa-solid fa-bars"></i>
+				</summary>
+
+				<ul
+					class="absolute right-0 mt-3 w-52 rounded-xl bg-white p-4 shadow-lg flex flex-col gap-3 text-center">
+					<li><a class="block whitespace-nowrap" href="">Inicio</a></li>
+					<li><a class="block whitespace-nowrap" href="">Recetas</a></li>
+					<li><a class="block whitespace-nowrap" href="">Estadísticas</a></li>
+					<li><a class="block whitespace-nowrap" href="">Nutria Bot</a></li>
+					<li><a class="block whitespace-nowrap" href="">Configuración</a></li>
+					<li><a class="block whitespace-nowrap" href="">Salir</a></li>
+				</ul>
+			</details>
+
+			<nav class="hidden md:block">
+				<ul class="m-5 flex flex-wrap justify-end gap-y-2">
+					<li class="list-none px-[10px]"><a class="inline no-underline whitespace-nowrap text-white"
+							href="">Inicio</a></li>
+					<li class="list-none px-[10px]"><a class="inline no-underline whitespace-nowrap text-white"
+							href="">Recetas</a></li>
+					<li class="list-none px-[10px]"><a class="inline no-underline whitespace-nowrap text-white"
+							href="">Estadísticas</a></li>
+					<li class="list-none px-[10px]"><a class="inline no-underline whitespace-nowrap text-white"
+							href="">Nutria Bot</a></li>
+					<li class="list-none px-[10px]"><a class="inline no-underline whitespace-nowrap text-white"
+							href="">Configuración</a></li>
+					<li class="list-none px-[10px]"><a class="inline no-underline whitespace-nowrap text-white"
+							href="">Salir</a></li>
+				</ul>
+			</nav>
+		</div> 
 	</header>
-	<main>
-		<div class="content login">
-			<div class="card">
-				<div class="panel">
-					<div class="login_header">
-						<h4>¡hola!</h4>
-						<p>Que bueno tenerte de regreso en NutrIA</p>
+	<main class="flex min-h-[90vh] items-center justify-center p-6">
+		<div class="flex justify-center text-white">
+			<div class="rounded-[30px] bg-gradient-to-b from-[#ff3b5c] via-[#ff6d3f] to-[#ffe34d] p-[6px]">
+				<div class="flex h-auto w-full max-w-[900px] flex-col items-center rounded-[25px] bg-gradient-to-b from-[#ff3b5c] via-[#ff6d3f] to-[#ff9a3a] p-[10px] shadow-[0_0_25px_rgba(255,200,0,0.6)] md:h-[600px]">
+					<div class="px-0 pb-[30px] pt-[10px] text-center">
+						<h4 class="m-5 text-[30px] capitalize">¡hola!</h4>
+						<p class=" m-[10px] text-base md:text-[20px]">Que bueno tenerte de regreso en NutrIA</p>
 					</div>
-					<form method="" action="">
-						<div>
-							<i class="fa-solid fa-envelope"></i>
-							<input type="email" name="email" id="email" placeholder="Email">
+					<form method="" action="" class="flex flex-col items-center">
+						<div class="m-[10px] flex w-full items-center gap-[10px] rounded-[30px] bg-[rgba(255,255,255,0.9)] px-[30px] py-[15px]">
+							<i class="fa-solid fa-envelope text-[rgba(0,0,0,0.4)]"></i>
+							<input class="w-full max-w-[400px] border-none bg-transparent font-inherit text-black outline-none placeholder:text-[rgba(0,0,0,0.4)]" type="email" name="email" id="email" placeholder="Email">
 						</div>
-						<div>
-							<i class="fa-solid fa-lock"></i>
-							<input type="password" name="password" id="password" placeholder="Contraseña">
+						<div class="m-[10px] flex w-full items-center gap-[10px] rounded-[30px] bg-[rgba(255,255,255,0.9)] px-[30px] py-[15px]">
+							<i class="fa-solid fa-lock text-[rgba(0,0,0,0.4)]"></i>
+							<input class="w-full max-w-[400px] border-none bg-transparent font-inherit text-black outline-none placeholder:text-[rgba(0,0,0,0.4)]" type="password" name="password" id="password" placeholder="Contraseña">
 						</div>
-						<button type="submit">Entar</button>
+						<button class="mt-5 w-[250px] cursor-pointer rounded-[20px] border-none bg-[#8b0f3f] p-[15px] text-white" type="submit">Entar</button>
 					</form>
-					<div class="login_footer">
-						<p>¿No tienes una cuenta? <a href="">Crear cuenta</a>. Accede como <a href="">Invitado.</a></p>
-						<p>Si tienes problemas para acceder a tu cuenta, <a href="">contacta</a> con nosotros</p>
+					<div class="px-0 pb-[30px] pt-[10px] text-center space-y-4">
+						<p class="m-[10px]">¿No tienes una cuenta? <a class="underline text-[#8b0f3f] font-bold" href="">Crear cuenta.</a></p>
+						<p class="m-[10px]"> Accede como <a class="underline text-[#8b0f3f] font-bold" href="">Invitado.</a></p>
+						<p class="m-[10px]">Si tienes problemas para acceder a tu cuenta, <a class="underline text-[#8b0f3f] font-bold" href="">contacta</a> con nosotros</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</main>
-	<footer></footer>
+	<footer class="rounded-base shadow-xs  border-default bg-gradient-to-r from-[#f2b48c] via-[#e59aa6] to-[#d9878f]">
+		<div class="mx-auto flex w-full max-w-screen-xl flex-col items-center gap-4 p-4 text-center md:flex-row md:justify-between md:text-left">
+			<span class="text-sm text-white sm:text-center">© 2023 Nutria. Todos los derechos reservados.
+			</span>
+			<ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-white sm:mt-0">
+				<li>
+					<a href="#" class="hover:underline me-4 md:me-6">Sobre nosotros</a>
+				</li>
+				<li>
+					<a href="#" class="hover:underline me-4 md:me-6">Política de privacidad</a>
+				</li>
+				<li>
+					<a href="#" class="hover:underline me-4 md:me-6">Licencia</a>
+				</li>
+				<li>
+					<a href="#" class="hover:underline">Contacto</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
 </body>
 </html>
