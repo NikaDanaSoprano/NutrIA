@@ -1,56 +1,108 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+	<script src="https://cdn.tailwindcss.com"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 	<title>¿Cómo deseas conseguirlo?</title>
 </head>
+
 <body class="page-gradient">
-	<header>
-		<div class="menu">
-            <ul>
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Recetas</a></li>
-                <li><a href="">Estadísticas</a></li>
-                <li><a href="">Nutria Bot</a></li>
-                <li><a href="">Configuración</a></li>
-                <li><a class="logout" href="">Salir</a>   </li>
-            </ul>      
-        </div>  
+	<header
+		class="bg-gradient-to-r from-[#f2b48c] via-[#e59aa6] to-[#d9878f] px-3 py-[5px] shadow-[0_4px_6px_rgba(0,0,0,0.4)]">
+		<div class="flex items-center justify-end">
+
+			<details class="md:hidden relative">
+				<summary class="list-none cursor-pointer text-white text-2xl">
+					<i class="fa-solid fa-bars"></i>
+				</summary>
+
+				<ul
+					class="absolute right-0 mt-3 w-52 rounded-xl bg-white p-4 shadow-lg flex flex-col gap-3 text-center">
+					<li><a class="block whitespace-nowrap" href="">Inicio</a></li>
+					<li><a class="block whitespace-nowrap" href="">Recetas</a></li>
+					<li><a class="block whitespace-nowrap" href="">Estadísticas</a></li>
+					<li><a class="block whitespace-nowrap" href="">Nutria Bot</a></li>
+					<li><a class="block whitespace-nowrap" href="">Configuración</a></li>
+					<li><a class="block whitespace-nowrap" href="">Salir</a></li>
+				</ul>
+			</details>
+
+			<nav class="hidden md:block">
+				<ul class="m-5 flex flex-wrap justify-end gap-y-2">
+					<li class="list-none px-[10px]"><a class="inline no-underline whitespace-nowrap text-white"
+							href="">Inicio</a></li>
+					<li class="list-none px-[10px]"><a class="inline no-underline whitespace-nowrap text-white"
+							href="">Recetas</a></li>
+					<li class="list-none px-[10px]"><a class="inline no-underline whitespace-nowrap text-white"
+							href="">Estadísticas</a></li>
+					<li class="list-none px-[10px]"><a class="inline no-underline whitespace-nowrap text-white"
+							href="">Nutria Bot</a></li>
+					<li class="list-none px-[10px]"><a class="inline no-underline whitespace-nowrap text-white"
+							href="">Configuración</a></li>
+					<li class="list-none px-[10px]"><a class="inline no-underline whitespace-nowrap text-white"
+							href="">Salir</a></li>
+				</ul>
+			</nav>
+		</div>
 	</header>
-	<main>
-		<div class="content setup">
-			<div class="setup_header">
-				<span><i class="fa-solid fa-star"></i></span>
-				<p>¿Cuál es tu objetivo?</p>
+	<main class="flex min-h-[90vh] items-center justify-center px-6">
+		<div class="flex flex-col items-center justify-start text-center">
+			<div class="mb-10 text-center text-[22px] font-semibold text-[rgba(0,0,0,0.7)]">
+				<span
+					class="inline-flex h-[100px] w-[100px] items-center justify-center rounded-full bg-gradient-to-br from-[#ff7a2f] to-[#ffc14d] text-[60px] shadow-[0_6px_12px_rgba(0,0,0,0.25)]"><i
+						class="fa-solid fa-star"></i></span>
+				<p class="m-10">¿Cuál es tu objetivo?</p>
 			</div>
-			<form action="/guardar-objetivo" method="POST">
-				<div class="goal">
-					<label class="goal_card">
+			<form action="/guardar-objetivo" method="POST" class="flex flex-col items-center">
+				<div class="flex flex-col gap-6 lg:flex-row lg:gap-[50px]">
+					<label
+						class="flex w-full max-w-[400px] cursor-pointer items-center gap-[30px] rounded-[20px] border-[3px] border-[rgba(255,255,255,0.8)] bg-gradient-to-r from-[#f2b48c] via-[#e59aa6] to-[#d9878f] p-[30px] text-left shadow-[0px_6px_15px_rgba(0,0,0,0.4)]">
 						<input type="radio" name="objetivo" value="plan">
-						<span><i class="fa-regular fa-clipboard"></i></span>
-						<div>
-							<span>Necesito un plan nutricional</span>
-							<p>Necesito guía para las comidas. No sé qué comer.</p> 
+						<span><i class="fa-regular fa-clipboard text-[35px]"></i></span>
+						<div class="min-h-[100px] p-[10px]">
+							<span class="font-bold">Necesito un plan nutricional</span>
+							<p>Necesito guía para las comidas. No sé qué comer.</p>
 						</div>
 					</label>
 
-					<label class="goal_card">
+					<label class="flex w-full max-w-[400px] cursor-pointer items-center gap-[30px] rounded-[20px] border-[3px] border-[rgba(255,255,255,0.8)] bg-gradient-to-r from-[#f2b48c] via-[#e59aa6] to-[#d9878f] p-[30px] text-left shadow-[0px_6px_15px_rgba(0,0,0,0.4)]">
 						<input type="radio" name="objetivo" value="contar_calorias">
-						<span><i class="fa-solid fa-scale-balanced"></i></span>
-						<div>
-							<span>Necesito contar calorias</span>
-							<p>Sé que debo comer. Necesito conocer las calorias que consumo.</p> 
+						<span><i class="fa-solid fa-scale-balanced text-[35px]"></i></span>
+						<div class="min-h-[100px] p-[10px]">
+							<span class="font-bold">Necesito contar calorias</span>
+							<p>Sé que debo comer. Necesito conocer las calorias que consumo.</p>
 						</div>
 					</label>
 				</div>
-				<button type="submit">Siguiente</button>
+				<button type="submit" class="mt-[60px] w-[250px] rounded-[20px] bg-[#8b0f3f] py-[15px] text-white">Siguiente</button>
 			</form>
 		</div>
 	</main>
-	<footer></footer>
+	<footer class="rounded-base shadow-xs  border-default bg-gradient-to-r from-[#f2b48c] via-[#e59aa6] to-[#d9878f]">
+		<div
+			class="mx-auto flex w-full max-w-screen-xl flex-col items-center gap-4 p-4 text-center md:flex-row md:justify-between md:text-left">
+			<span class="text-sm text-white sm:text-center">© 2023 Nutria. Todos los derechos reservados.
+			</span>
+			<ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-white sm:mt-0">
+				<li>
+					<a href="#" class="hover:underline me-4 md:me-6">Sobre nosotros</a>
+				</li>
+				<li>
+					<a href="#" class="hover:underline me-4 md:me-6">Política de privacidad</a>
+				</li>
+				<li>
+					<a href="#" class="hover:underline me-4 md:me-6">Licencia</a>
+				</li>
+				<li>
+					<a href="#" class="hover:underline">Contacto</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
 </body>
+
 </html>
