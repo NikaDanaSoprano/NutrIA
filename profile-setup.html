@@ -6,18 +6,20 @@
 	<link rel="stylesheet" type="text/css" href="./css/styles.css">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon16.png">
 	<title>Configuración - Perfil</title>
 </head>
 <body class="page-gradient">
 	<header>
 		<div class="menu">
             <ul>
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Recetas</a></li>
+                <li><a href="./home.html">Inicio</a></li>
+                <li><a href="./home-recipes.html">Recetas</a></li>
                 <li><a href="">Estadísticas</a></li>
-                <li><a href="">Nutria Bot</a></li>
+                <li><a href="./recipes.html">Nutria Bot</a></li>
                 <li><a href="">Configuración</a></li>
-                <li><a class="logout" href="">Salir</a>   </li>
+                <li><a class="logout" href="">Salir</a></li>
             </ul>      
         </div>  
 	</header>
@@ -26,24 +28,24 @@
 			<div class="card">
 				<div class="panel">
 					<div class="setup_header">
-				        <span><i class="fa-regular fa-user"></i></i></span>
+				        <span><i class="fa-regular fa-user"></i></span>
 			        </div>
 					<form method="" action="">
 						<div>
 							<i class="fa-solid fa-venus-mars"></i>
-							<input type="text" name="sexo" id="sexo" placeholder="Sexo">
+							<input type="text" name="sexo" id="sexo" placeholder="Sexo" readonly>
 						</div>
 						<div>
 							<i class="fa-solid fa-cake-candles"></i>
-							<input type="number" name="edad" id="edad" placeholder="Edad">
+							<input type="number" name="edad" id="edad" placeholder="Edad" readonly>
 						</div>
                         <div>
 							<i class="fa-solid fa-ruler-vertical"></i>
-							<input type="number" name="altura" id="altura" placeholder="Altura">
+							<input type="number" name="altura" id="altura" placeholder="Altura" readonly>
 						</div>
                         <div>
 							<i class="fa-solid fa-weight-scale"></i>
-							<input type="number" name="peso" id="peso" placeholder="Peso">
+							<input type="number" name="peso" id="peso" placeholder="Peso" readonly>
 						</div>
 						<button type="submit">Continuar</button>
 					</form>
@@ -51,43 +53,49 @@
 				</div>
 				<div class="modal">
 					<div class="modal-header">
-						<div class="modal-header-sexo"><p>Sexo</p></div>
-						<div class="modal-header-edad"><p>Edad</p></div>
-						<div class="modal-header-altura"><p>Altura</p></div>
-						<div class="modal-header-peso"><p>Peso</p></div>
+						<div class="step ">Sexo</div>
+						<div class="step ">Edad</div>
+						<div class="step active">Altura</div>
+						<div class="step">Peso</div>
 					</div>
 					<div class="modal-body">
-						<div class="modal-sexo">							
+						<div class="modal-step step-sexo ">
 							<button type="button" data-value="mujer">Mujer</button>
 							<button type="button" data-value="hombre">Hombre</button>
 						</div>
-						<div class="modal-edad">							
-							<div class="age_selector">
+						<div class="modal-step step-edad ">
+							<div class="selector">
+								<button class="menos" type="button">−</button>
+								<div class="display">18</div>
+								<button class="mas" type="button">+</button>
+							</div>
+							<span class="unidad">años</span>
+						</div>
+
+						<div class="modal-step step-altura active">
+							<div class="selector">
 								<button type="button">−</button>
-
-								<div class="age_display">18</div>
-
+								<div class="display">170</div>
 								<button type="button">+</button>
-    						</div>
+							</div>
+							<span class="unidad">cm</span>
+						</div>
 
-    						<span>años</span>
+						<div class="modal-step step-peso">
+							<div class="selector">
+								<button type="button">−</button>
+								<div class="display">65</div>
+								<button type="button">+</button>
+							</div>
+							<span class="unidad">kg</span>
+						</div>
 
-  						</div>
-						</div>
-						<div class="modal-altura">							
-							<button type="button" data-value="mujer">Mujer</button>
-							<button type="button" data-value="hombre">Hombre</button>
-						</div>
-						<div class="modal-peso">							
-							<button type="button" data-value="mujer">Mujer</button>
-							<button type="button" data-value="hombre">Hombre</button>
-						</div>
 					</div>
+
 					<div class="modal-footer">
-						<div class="modal-footer-edad">
-							<button type="button">OK</button>
-						</div>						
+						<button type="button" class="btn-next">Continuar</button>
 					</div>
+
 				</div>
 			</div>
 		</div>

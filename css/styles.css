@@ -24,6 +24,7 @@ body.page-gradient {
 	#ff9035 90%,
 	#ff9a3a 100%
 	);
+	min-height: 100vh;
 }
 body.page-white {
 	background-color: #fff;
@@ -33,11 +34,8 @@ header {
   padding: 5px 12px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.4);
 }
-main{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 90vh;
+main {
+	width: 100%;
 }
 .menu {
 	display: flex;
@@ -55,47 +53,78 @@ main{
 	display: inline;
 }
 
-/*Home*/
-.content .logo {
+/*Home-start*/
+.content-home .logo {
 	width: 700px;
 	margin: 0px 90px 0px 0px;
 }
-.content .logo img {
+.content-home .logo img {
 	width: 100%;
 }
-.home {
+.content-home {
 	display: flex;
+	justify-content: center;
 	align-items: center;
-}
-.home {
 	text-align: center;
-}
-.home_txt{
-	color: rgba(255, 255, 255, 255);
+    min-height: calc(100vh - 80px);
 }
 .home_txt {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	font-size: 20px;
+	color: rgba(255, 255, 255, 255);
 }
 .home_txt h2 {
+	margin: 30px 0px!important;
+}
+.btn-start {
+    display: flex;
+    justify-content: center;
+	align-items: center;
+    gap: 20px;
+    padding: 14px;
+    border-radius: 40px;
+    color: white;
+    text-decoration: none;
+    background: linear-gradient(90deg,#ff2d55,#ff8a2f);
+    box-shadow:
+        0 6px 12px rgba(0,0,0,0.25),
+        0 0 0 3px rgba(255,200,120,0.6),
+        0 0 18px rgba(255,200,120,0.6);
+    transition: all .25s ease;
+	font-weight: 400;
+	text-transform: capitalize;
+	font-size: 20px;
+	margin: 40px 0px;
+}
+.btn-start:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 10px 20px rgba(0,0,0,0.35),
+        0 0 0 3px rgba(255,220,140,0.8),
+        0 0 25px rgba(255,220,140,0.8);
+}
+.btn-start span {
+	width: 80px;
 	font-size: 30px;
+    padding: 6px 16px;
+    border-radius: 25px;
+    background: rgba(80,0,30,0.55);   /* gris oscuro rojizo translúcido */
+    color: rgba(255,255,255,0.75);    /* gris claro */
 }
-.btn_start{
-  border: 1px solid blue;
-  padding: 12px 25px;
-  border-radius: 30px;
-  color: white;
-  margin:40px;
-  text-transform: capitalize;
-}
-.btn_start span {
-	background: red;
-	border-radius: 10px;
-	padding: 5px 15px;
-}
+
 /*Login*/
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 40px;
+	min-height: 80px;
+}
+.content h2 {
+	margin: 30px 0px!important;
+}
 .login {
 	display: flex;
 	justify-content: center;
@@ -179,7 +208,7 @@ main{
 .panel form input::placeholder{
 	color: rgba(0,0,0,0.4);
 }
-.panel button, .setup button {
+.panel button, .setup button, .modal-footer button, .btn-progress {
 	background-color: #8b0f3f;
 	width: 250px;
 	color: #fff;
@@ -259,14 +288,17 @@ main{
 	background: linear-gradient(to right, #f2b48c, #e59aa6, #d9878f);
 	border:3px solid rgba(255,255,255,0.9);
 	box-shadow: 0px 6px 15px rgba(0, 0, 0,  0.4);
+	cursor: pointer;
 }
 .profile_setup input {
 	cursor: pointer;
+	text-align: right;
 }
 .profile_setup input::placeholder {
 	color: rgba(0, 0, 0, 0.9)!important;
 	font-weight: bold;
 	font-size: 15px;
+	text-align: left;
 }
 .profile_setup form i {
 	color: rgba(0, 0, 0, 0.9)!important;
@@ -277,13 +309,13 @@ main{
 	background: transparent;
 	box-shadow: none;
 }
-.profile_setup button {
+.panel button, .modal-footer button {
 	background: linear-gradient(180deg, #494747, #292323);
 }
 /*Modal*/
 .modal {
 	background: linear-gradient(
-	180deg,
+	360deg,
 	#ffa63d 0%,
 	#ff6a4a 40%,
 	#ff2d55 100%
@@ -295,16 +327,81 @@ main{
 	flex-direction:column;
 	justify-content:start;
 	align-items:center;
+	box-shadow: 4px 10px 60px rgba(0, 0, 0, 0.4);
+}
+.modal-header {
+	color: rgba(255, 255, 255, 255);
+	font-weight: bolder;
+	font-size: 20px;
+	margin: 40px;
+}
+.step {
+	display: none;
+}
+.step.active {
+	display: initial;
+}
+.modal-step {
+	display: none;
+}
+.modal-step.active {
+	display: flex;
+	flex-direction: column;	
+}
+.step-sexo button{
+    width: 140px;
+	margin: 15px;
+    height: 60px;
+    border-radius: 12px;
+    border: none;
+    background: #f3eded;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow:
+        0 6px 12px rgba(0,0,0,.25),
+        inset 0 2px 4px rgba(255,255,255,.8);
+}
+.selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+.selector button {
+    width: 70px;
+    height: 70px;
+    border-radius: 18px;
+    border: none;
+    background: #f4eeee;
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    box-shadow:
+        0 6px 12px rgba(0,0,0,0.25),
+        inset 0 2px 4px rgba(255,255,255,0.8);
+
+    transition: all .2s ease;
+}
+.selector button:hover {
+    transform: translateY(-2px);
+	cursor: pointer;
+}
+.display{
+    font-size: 64px;
+    font-weight: 700;
+    color: white;
+}
+.unidad {
+    text-align: center;
+    font-size: 22px;
+    opacity: 0.8;
+    margin-top: 10px;
+    color: white;
 }
 /*Recipes*/
 .profile-header {
 	background-color: #f4e5d0!important;
-}
-.content {
-	display: flex;
-	flex-direction: column;
-	align-self: start;
-	margin: 40px;
 }
 .header-recipes {
 	margin: 30px 0px;
@@ -312,34 +409,41 @@ main{
     justify-content: space-between;
     align-items: center;
 }
-.content h2 {
-	margin: 30px 0px!important;
+.content-recipes {
+	margin: 80px 40px;
 }
 .header-recipes p {
 	font-size: 40px;
 }
 .search form div {
+	width: 600px;
 	box-shadow:
         inset 0 2px 6px rgba(0,0,0,0.12),
         inset 0 -2px 4px rgba(255,255,255,0.8);
 }
+.search input {
+	width: 100%;
+}
+.content-recipes h2 {
+	margin: 30px 0px;;
+}
 .feed, .feed div {
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	gap: 50px;
 }
 .recipe {
-    width: 260px;
+    width: 290px;
     position: relative;
 	cursor: pointer;
 }
-.img-box img{
+.img-box img {
     width: 100%;
     height: 180px;
     object-fit: cover;
     border-radius: 20px;
 }
-.card-info{
+.card-info {
     background: #ffd6d6;
     border-radius: 25px;
     padding: 20px;
@@ -349,4 +453,246 @@ main{
     top: -50px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     text-align: center;
+}
+/*Activity*/
+.level-bars {
+    display:flex;
+    gap:6px;
+    height:30px;
+    align-items:flex-end;
+	cursor: pointer;
+}
+.level-bars label {
+	cursor: pointer;
+}
+.level-bars span {
+    width:4px;
+    background:#333;
+    border-radius:2px;
+}
+.level-bars .level-txt {
+	display: flex;
+	flex-direction: column;
+	padding: 5px;;
+}
+
+.level-bars span:nth-child(1){height:8px;}
+.level-bars span:nth-child(2){height:12px;}
+.level-bars span:nth-child(3){height:16px;}
+.level-bars span:nth-child(4){height:20px;}
+.level-bars span:nth-child(5){height:24px;}
+
+.level-1 span:nth-child(n+2),
+.level-2 span:nth-child(n+3),
+.level-3 span:nth-child(n+4),
+.level-4 span:nth-child(n+5){
+  opacity:.3;
+}
+.level-bars i {
+    font-size: 25px!important;
+}
+/*Welcome*/
+.page-recipes {
+	background: linear-gradient(to right, #f2b48c, #e59aa6, #d9878f);
+}
+.home-recipes {
+	background: linear-gradient(
+		360deg,
+		#ffa63d 0%,
+		#ff6a4a 40%,
+		#ff2d55 100%
+		);
+}
+.welcome {
+	margin: 40px;
+}
+.welcome h2 {
+	margin: 30px 0px;
+}
+.feed-login, .feed-user {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+.feed-login div {
+	display: flex;
+	gap: 20px;
+}
+.featured {
+    position: relative;
+    width: 320px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.featured img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.featured::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0,0,0,0.15),
+        rgba(0,0,0,0.6)
+    );
+}
+.featured h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+	text-align: center;
+    z-index: 2;
+}
+.feed-user {
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+}
+.feed-user div {
+	display: flex;
+	gap: 40px;
+}
+.recipe-community {
+    width: 275px;
+    background: #e6e1db;
+    border-radius: 20px;
+    padding: 15px;
+	cursor: pointer;
+}
+
+.recipe-community .img-box {
+    position: relative;
+}
+
+.recipe-community img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.recipe-community .card-info {
+	position: inherit;
+	background-color: transparent;
+    box-shadow: none;
+    padding: 15px 5px 5px;
+	display: flex;
+	justify-content: center;
+}
+
+.recipe-community h5 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: #2d2d2d;
+}
+.fav-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: none;
+    background: #e0e0e0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fav-btn i {
+    color: #ff5a5f;
+    font-size: 14px;
+}
+/*Progress*/
+.content-progress {
+	margin: 50px;
+}
+.header-progress h2 {
+	font-size: 30px;
+	margin: 20px;
+}
+.progress {
+	display: flex;
+	justify-content: space-around;
+	min-height: 400px;
+}
+.progress-options {
+	min-width: 450px;
+	min-height: 500px;
+	background: linear-gradient(
+		135deg,
+		#f6c79c 0%,
+		#f2a8a6 30%,
+		#e88ea0 60%,
+		#e9b88a 100%
+	);
+	box-shadow: 
+    0 12px 25px rgba(0,0,0,0.18),
+    0 4px 8px rgba(0,0,0,0.08);
+	border-radius: 20px;
+	padding: 20px;
+	text-align: center;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fa-bullseye, .fa-chart-line {
+	font-size: 50px;
+	color: rgba(225, 214, 225, 0.9)
+}
+.progress-card {
+	display:flex;
+    flex-direction:column;
+    justify-content:center;
+    height:100%;
+	align-items: center;
+}
+.progress-card h3 {
+	margin: 40px;
+	text-align: center;
+}
+.progress-values {
+	display: flex;
+	justify-content: space-around;
+}
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background: #4a4a4a;
+    border-radius: 10px;
+    overflow: hidden;
+	margin: 10px 0px;
+}
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg,#ffcc33,#ff9900);
+    border-radius: 10px;
+}
+.btn-progress, .progress a {
+	margin: 30px;
+}
+.progress-card a {
+	display: block;
+	background-color: #8b0f3f;
+	width: 250px;
+	color: #fff;
+	padding: 12px;
+	border-radius: 20px;
+	border: none;
+	cursor: pointer;
+	margin: 20px 0px 0px 10px;
+	font-size: 14px;
 }

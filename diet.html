@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon16.png">
+	<title>Configuración - Tipo de dieta</title>
+</head>
+<body class="page-gradient">
+	<header>
+		<div class="menu">
+            <ul>
+                <li><a href="./home.html">Inicio</a></li>
+                <li><a href="./home-recipes.html">Recetas</a></li>
+                <li><a href="">Estadísticas</a></li>
+                <li><a href="./recipes.html">Nutria Bot</a></li>
+                <li><a href="">Configuración</a></li>
+                <li><a class="logout" href="">Salir</a></li>
+            </ul>      
+        </div>  
+	</header>
+	<main>
+		<div class="content login profile_setup">
+			<div class="card">
+				<div class="panel">
+					<div class="setup_header">
+				        <span><i class="fa-solid fa-utensils"></i></i></i></span>
+			        </div>
+					<form method="" action="">
+                        <div class="level-bars">
+                            <i class="fa-solid fa-star"></i>
+                            <label class="level-txt" for="recomendada">
+                                <input type="text" name="recomendada" id="recomendada" placeholder="Recomendada" readonly>
+                                    Mezcla de proteínas, carbohidratos y grasas
+                            </label>
+                        </div>
+						<div class="level-bars">
+                            <i class="fa-solid fa-cookie"></i>
+                            <label class="level-txt" for="proteina">
+                                <input type="text" name="proteina" id="proteina" placeholder="Alta en proteina" readonly>
+                                Más proteínas, menos carbohidratos y grasas
+                            </label>
+						</div>
+                       <div class="level-bars">
+                            <i class="fa-solid fa-drumstick-bite"></i>
+                            <label class="level-txt" for="keto">                                
+                                <input type="text" name="keto" id="keto" placeholder="Keto" readonly>
+                                Alta en grasas y proteina moderada
+                            </label>
+						</div>
+                        <div class="level-bars">
+                            <i class="fa-solid fa-leaf"></i>
+                            <label class="level-txt" for="lowcarbs">                                 
+                                <input type="text" name="lowcarbs" id="lowcarbs" placeholder="Baja en carbohidratos" readonly>
+                                Más grasas y proteínas moderadas
+                            </label>
+						</div>
+                        <div class="level-bars">
+                            <i class="fa-solid fa-carrot"></i>
+                            <label class="level-txt" for="light"> 
+                                <input type="text" name="light" id="light" placeholder="Baja en grasas" readonly>
+                                Menos grasas, más carbohidratos
+                            </label>
+						</div>
+						<button type="submit">Continuar</button>
+					</form>
+					<div class="setup_footer"></div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer></footer>
+</body>
+</html>
