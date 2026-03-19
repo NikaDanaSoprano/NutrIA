@@ -16,9 +16,9 @@
             <ul>
                 <li><a href="./home.html">Inicio</a></li>
                 <li><a href="./home-recipes.html">Recetas</a></li>
-                <li><a href="./progress.html">Estadísticas</a></li>
+                <li><a href="./progress.html">Progreso</a></li>
                 <li><a href="./recipes.html">Nutria Bot</a></li>
-                <li><a href="./statistics.html">Configuración</a></li>
+                <li><a href="./profile.html">Perfil</a></li>
                 <li><a class="logout" href="">Salir</a></li>
             </ul>      
         </div>  
@@ -31,28 +31,43 @@
             <div class="progress">
                 <div class="progress-options">
                     <div class="progress-card">
-                        <i class="fa-solid fa-bullseye"></i>
-                        <h3>Objetivo de usuario</h3>
-
-                        <div class="progress-values">
-                            <span>peso inicial</span>
-                            <span>Peso objetivo</span>
+                        <div class="card-header">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <h3>Objetivo de usuario</h3>
                         </div>
-
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width:40%"></div>
+                        <div class="data-bar">
+                            <div class="progress-values">
+                                <span>peso inicial</span>
+                                <span>Peso objetivo</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width:40%"></div>
+                            </div>
                         </div>
-
-                        <button class="btn-progress">Ver progreso</button>
+                        <div>
+                            <button class="btn-progress">Ver progreso</button>
+                        </div>
                     </div>
                 </div>     
                 <div class="progress-options">
                     <div class="progress-card">
-                        <i class="fa-solid fa-chart-line"></i>
-                        <h3>Estadísticas</h3>
-                        <p>Comprueba tu progereso mes a mes</p>
-                        <p>Actualiza o modifica datos</p>
-                        <a href="./statistics.html">Ver estadísticas</a>
+                        <div class="card-header">
+                            <i class="fa-solid fa-bullseye"></i>
+                            <h3>Tus datos</h3>
+                        </div>
+                        <div class="data-bar">
+                            <table>
+                                <th>Fecha</th>
+                                <th>Peso</th>
+                                <tr>
+                                    <td>1/1/2026</td>
+                                    <td>80 kg</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <a href="./profile.html">Añade nuevo peso</a>
+                        </div>
                     </div>
                 </div>
             </div>           

@@ -194,7 +194,7 @@ main {
 	background: rgba(255,255,255,0.9);
 	margin: 10px;
 }
-.panel form div i, .search i {
+.panel form div i, .search i, .profile-panel i {
 	color: rgba(0,0,0,0.4);
 }
 .panel form input, .search input {
@@ -208,7 +208,7 @@ main {
 .panel form input::placeholder{
 	color: rgba(0,0,0,0.4);
 }
-.panel button, .setup button, .modal-footer button, .btn-progress {
+.panel button, .setup button, .modal-footer button, .btn-progress, .profile-panel button {
 	background-color: #8b0f3f;
 	width: 250px;
 	color: #fff;
@@ -596,25 +596,6 @@ main {
     font-weight: 700;
     color: #2d2d2d;
 }
-.fav-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    border: none;
-    background: #e0e0e0;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.fav-btn i {
-    color: #ff5a5f;
-    font-size: 14px;
-}
 /*Progress*/
 .content-progress {
 	margin: 50px;
@@ -626,8 +607,10 @@ main {
 .progress {
 	display: flex;
 	justify-content: space-around;
-	min-height: 400px;
+	gap:40px;
+    align-items:stretch;
 }
+
 .progress-options {
 	min-width: 450px;
 	min-height: 500px;
@@ -644,25 +627,34 @@ main {
 	border-radius: 20px;
 	padding: 20px;
 	text-align: center;
-	display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.fa-bullseye, .fa-chart-line {
-	font-size: 50px;
-	color: rgba(225, 214, 225, 0.9)
+	display:flex;
+    flex-direction:column;
+    height:100%;
 }
 .progress-card {
 	display:flex;
     flex-direction:column;
     justify-content:center;
-    height:100%;
-	align-items: center;
+    align-items:center;
+    text-align:center;
+	width: 100%;
+
 }
-.progress-card h3 {
-	margin: 40px;
+.card-header {
 	text-align: center;
+	margin: 10px;
+}
+.progress-options .fa-bullseye,.progress-options .fa-chart-line {
+	font-size: 50px;
+	color: rgba(225, 214, 225, 0.9);
+	margin: 40px;
+}
+.data-bar {
+	min-height: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-self: stretch;
 }
 .progress-values {
 	display: flex;
@@ -692,7 +684,35 @@ main {
 	padding: 12px;
 	border-radius: 20px;
 	border: none;
-	cursor: pointer;
+	cursor: none;
 	margin: 20px 0px 0px 10px;
 	font-size: 14px;
 }
+.profile-panel form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.profile-panel .form-content .profile-field div {
+	padding: 15px 30px;
+	border-radius: 30px;
+	background: rgba(255,255,255,0.9);
+	margin: 10px;
+}
+.profile-panel .form-content  {
+	margin: 10px 30px;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+.profile-panel form input {
+	border: none;
+	background: transparent;
+	outline: none;
+	color: #000;
+	font-family: inherit;
+	cursor: none;
+	width: 400px;
+}
+
